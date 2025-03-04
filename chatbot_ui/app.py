@@ -133,7 +133,7 @@ def get_openai_response(messages):
             messages[0]["content"] = system_content[:int(len(system_content) * 0.5)]
         
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4o-mini",
             messages=messages,
             max_tokens=500,
             n=1,
