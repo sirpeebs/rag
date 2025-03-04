@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Haas CNC Service Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- Include Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+        integrity="sha512-nGm7/IF7ah+AJuMHoKvM9dS0MRjqej8+J1VfIbmwN5VN/KlFmslqGR3NldH8+JwMZWUEXtqVXqIrFgwGX3708A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <button id="newChatBtn" class="new-chat-btn">
+          <i class="fa-solid fa-plus"></i> New Chat
+        </button>
+        <button id="toggleSidebar" class="toggle-sidebar-btn">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+      </div>
+      <div class="conversations-list" id="conversationsList">
+        <!-- Conversation history will be added here -->
+      </div>
+    </div>
+    <!-- Main content -->
+    <div class="main-content">
+      <div class="chat-container">
+        <div id="chat-log" class="chat-log">
+          <!-- Chat messages will appear here -->
+        </div>
+        <form id="chat-form">
+          <input type="text" id="chat-input" placeholder="Type your message..." autocomplete="off" required>
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
